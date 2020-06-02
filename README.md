@@ -75,3 +75,36 @@ docker run -d -p 8080:8080 --name demo-official-openjdk-alpine demo-official-ope
 docker stop demo-official-openjdk-alpine
 ```
 
+
+
+# Build Official Openjdk Image with Custom runtime
+
+```
+cd official-openjdk-image-with-custom-runtime/
+cp ../demo/target/demo-0.0.1-SNAPSHOT.jar .
+```
+
+
+
+```
+docker build -t demo-official-openjdk-custom-runtime:latest .
+```
+
+
+
+```
+docker images
+REPOSITORY                             TAG                 IMAGE ID            CREATED             SIZE
+demo-official-openjdk-custom-runtime   latest              073154e67f33        7 seconds ago       85.5MB
+```
+
+
+
+```
+docker run -d -p 8080:8080 --name demo-official-openjdk-custom-runtime demo-official-openjdk-custom-runtime:latest
+
+docker stop demo-official-openjdk-alpine
+```
+
+
+
