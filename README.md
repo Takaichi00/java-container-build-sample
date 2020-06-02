@@ -35,18 +35,43 @@ docker build -t demo-official-openjdk:latest .
 ```
 docker images 
 REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
-demo-official-openjdk   latest              784d51835a4e        16 seconds ago      644MB
+demo-official-openjdk    latest              65940a92c87c        4 seconds ago       436MB
 ```
 
 
 
 ```
-docker run -d -p 8080:8080 demo-official-openjdk:latest
-```
-
-
-
-```
+docker run -d -p 8080:8080 --name demo-official-openjdk demo-official-openjdk:latest
 docker stop demo-official-openjdk
+```
+
+
+
+# Build Official Openjdk-Alpine Image
+
+```
+cd official-openjdk-apline-image/
+cp ../demo/target/demo-0.0.1-SNAPSHOT.jar .
+```
+
+
+
+```
+docker build -t demo-official-openjdk-alpine:latest .
+```
+
+
+
+```
+docker images 
+REPOSITORY                     TAG                 IMAGE ID            CREATED             SIZE
+demo-official-openjdk-alpine   latest              ebf56b28f497        4 seconds ago        358MB
+```
+
+
+
+```
+docker run -d -p 8080:8080 --name demo-official-openjdk-alpine demo-official-openjdk-alpine:latest
+docker stop demo-official-openjdk-alpine
 ```
 
