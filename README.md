@@ -6,6 +6,14 @@
 
 
 
+# Image size summary
+
+| Openjdk | Openjdk-Alpine | Custom Runtime |
+| ------- | -------------- | -------------- |
+| 436 MB  | 358 MB         | **85.5 MB**    |
+
+
+
 # Prepare
 
 - compile spring boot application
