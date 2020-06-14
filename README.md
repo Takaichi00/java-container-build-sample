@@ -143,3 +143,6 @@ java.base,java.desktop,java.instrument,java.management.rmi,java.naming,java.pref
 
 
 # Reference
+
+-  [SpringBootのdockerイメージを必要最小限に絞りたい(2019年9月版)](https://www.m3tech.blog/entry/2019/09/13/110000)
+- [Dockerで動かす軽量なJava環境の作成](https://qiita.com/zgmf_mbfp03/items/e86dd1f03f96d4aa5dd5)
