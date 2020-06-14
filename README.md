@@ -111,8 +111,35 @@ demo-official-openjdk-custom-runtime   latest              073154e67f33        7
 ```
 docker run -d -p 8080:8080 --name demo-official-openjdk-custom-runtime demo-official-openjdk-custom-runtime:latest
 
-docker stop demo-official-openjdk-alpine
+docker stop demo-official-openjdk-custom-runtime
 ```
 
 
 
+
+
+# How to get SpringBoot module
+
+- Use Java **12**
+
+```
+java -version
+
+openjdk version "12.0.2" 2019-07-16
+```
+
+
+
+- execute `official-openjdk-image-with-custom-runtime/get-springboot-module.sh`
+  - reference: [SpringBootのdockerイメージを必要最小限に絞りたい(2019年9月版)](https://www.m3tech.blog/entry/2019/09/13/110000)
+  - You can get SpringBoot module.
+
+```
+./get-springboot-module.sh demo-0.0.1-SNAPSHOT.jar 11
+
+java.base,java.desktop,java.instrument,java.management.rmi,java.naming,java.prefs,java.scripting,java.security.jgss,java.sql,jdk.httpserver,jdk.unsupported
+```
+
+
+
+# Reference

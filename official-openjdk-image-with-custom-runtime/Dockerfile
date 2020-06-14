@@ -2,8 +2,7 @@ FROM adoptopenjdk/openjdk11:alpine AS java-build
 WORKDIR /jlink
 ENV PATH $JAVA_HOME/bin:$PATH
 RUN jlink --strip-debug --no-header-files --no-man-pages --compress=2 --module-path $JAVA_HOME \
-    --add-modules java.base,java.logging,java.xml,jdk.unsupported,java.sql,java.naming,java.desktop,java.management,java.security.jgss,java.instrument,jdk.localedata \
-    --include-locales=en,ja,*-IN \
+    --add-modules java.base,java.desktop,java.instrument,java.management.rmi,java.naming,java.prefs,java.scripting,java.security.jgss,java.sql,jdk.httpserver,jdk.unsupported \
     --output jre-min
 
 
