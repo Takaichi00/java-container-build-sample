@@ -33,7 +33,7 @@ RUN apk --update add --no-cache ca-certificates curl openssl binutils xz \
     && apk del binutils \
     && rm -rf /tmp/${GLIBC_VER}.apk /tmp/gcc /tmp/gcc-libs.tar.xz /tmp/libz /tmp/libz.tar.xz /var/cache/apk/*
 
-COPY --from=java-build /jlink/jre-min /opt/jre-min
+COPY --from=java-builder /jlink/jre-min /opt/jre-min
 ADD ./demo-0.0.1-SNAPSHOT.jar /opt/demo/demo-0.0.1-SNAPSHOT.jar
 ENV PATH /opt/jre-min/bin:$PATH
 
