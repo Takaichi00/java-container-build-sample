@@ -58,7 +58,7 @@ docker stop demo-official-openjdk
 # Build Official Openjdk-Alpine Image
 
 ```
-cd official-openjdk-apline-image/
+cd official-openjdk-alpine-image/
 cp ../demo/target/demo-0.0.1-SNAPSHOT.jar .
 ```
 
