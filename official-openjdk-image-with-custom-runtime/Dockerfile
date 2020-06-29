@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk11:alpine AS java-build
+FROM adoptopenjdk/openjdk11:alpine AS java-builder
 WORKDIR /jlink
 ENV PATH $JAVA_HOME/bin:$PATH
 RUN jlink --strip-debug --no-header-files --no-man-pages --compress=2 --module-path $JAVA_HOME \
