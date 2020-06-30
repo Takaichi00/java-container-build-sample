@@ -109,9 +109,9 @@ demo-official-openjdk-custom-runtime   latest              073154e67f33        7
 
 
 ```
-docker run -d -p 8080:8080 --name demo-official-openjdk-custom-runtime demo-official-openjdk-custom-runtime:latest
+docker run -d -p 8080:8080 --name demo-custom-runtime demo-custom-runtime:latest
 
-docker stop demo-official-openjdk-custom-runtime
+docker stop demo-custom-runtime
 ```
 
 
