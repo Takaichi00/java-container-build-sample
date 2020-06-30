@@ -95,7 +95,7 @@ cp ../demo/target/demo-0.0.1-SNAPSHOT.jar .
 
 
 ```
-docker build -t demo-official-openjdk-custom-runtime:latest .
+docker build -t demo-custom-runtime:latest .
 ```
 
 
